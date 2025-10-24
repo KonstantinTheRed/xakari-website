@@ -1,3 +1,4 @@
+import Join from "../Join/Join";
 import styles from "./styles.module.css";
 interface BannerProps {
   video_source: string;
@@ -24,6 +25,7 @@ export default function Banner(props: BannerProps) {
       >
         <source src={props.video_source} type="video/mp4"></source>
       </video>
+      <Join />
     </div>
   );
 }
