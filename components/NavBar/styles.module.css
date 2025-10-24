@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
 
-  height: 8vh;
-  max-height: 8vh;
+  height: 8dvh;
+  max-height: 8dvh;
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(25px);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9);
