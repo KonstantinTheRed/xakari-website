@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+}
+
+.video {
+  position: absolute;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 9%,
+    rgba(0, 0, 0, 0) 71%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
