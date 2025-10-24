@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={UbuntuFont} lang="en">
+    <html className={UbuntuFont.className} lang="en">
       <body>
         <NavBar />
         {children}

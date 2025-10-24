@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 interface BannerProps {
   video_source: string;
-  img_source: string;
+  img_source?: string;
   width: string;
   height: string;
 }
