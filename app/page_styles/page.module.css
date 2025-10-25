@@ -4,22 +4,42 @@
   width: 100%;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
 }
-
+.main {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(15px) saturate(160%);
+  overflow: hidden;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
+}
 .about {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(15px) saturate(160%);
-  .xakari_front_app {
-    display: none;
-  }
+  /* background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(15px) saturate(160%); */
+
   div {
+    .xakari_front_app {
+      display: none;
+    }
+  }
+  article {
     padding: 20px 30px;
     h2 {
       color: rgba(29, 135, 254, 1);
       margin: 10px 0px;
+      background: linear-gradient(
+        90deg,
+        rgba(29, 135, 254, 1) 0%,
+        rgba(255, 167, 60, 1) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      background-size: 500% auto;
+      animation: textShine 5s ease-in-out infinite alternate;
     }
+
     p {
       color: white;
       font-size: 16px;
@@ -30,20 +50,22 @@
 
 .tutorial {
   display: flex;
-  background: rgba(0, 0, 0, 0.9);
+  /* background: rgba(0, 0, 0, 0.9); */
   flex-direction: column;
-  backdrop-filter: blur(15px) saturate(160%);
+  /* backdrop-filter: blur(15px) saturate(160%); */
   align-items: center;
   div {
     display: flex;
     justify-content: space-around;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7) inset;
+    /* background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7) inset; */
 
     width: 100vw;
     padding: 20px;
     img {
       width: 40%;
+    }
+    img:nth-child(1) {
     }
   }
   article {
@@ -51,6 +73,17 @@
     h2 {
       color: rgba(255, 167, 60, 1);
       margin: 10px 0px;
+      background: linear-gradient(
+        90deg,
+        rgba(29, 135, 254, 1) 0%,
+        rgba(255, 167, 60, 1) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      background-size: 500% auto;
+      animation: textShine 5s ease-in-out infinite alternate;
     }
     p {
       color: white;
@@ -59,21 +92,104 @@
     }
   }
 }
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.phoneImageLeft,
+.phoneImageRight {
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.6s ease-out;
+  will-change: transform, opacity;
+}
+
+/* "Out" state (starting position) for the left image */
+.phoneImageLeft {
+  transform: translateX(-50%) rotate(-20deg);
+}
+
+/* "Out" state (starting position) for the right image */
+.phoneImageRight {
+  transform: translateX(50%) rotate(20deg);
+}
+
+/* "In" state (final position) - triggered by .isVisible */
+.isVisible .phoneImageLeft,
+.isVisible .phoneImageRight {
+  opacity: 1;
+  transform: translateX(0) rotate(0);
+}
 @media (min-width: 800px) {
+  .viewport {
+    padding: 0% 10%;
+    display: flex;
+    justify-content: center;
+  }
+  .main > section:nth-child(odd) .tutorial {
+    flex-direction: row-reverse;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px) saturate(160%);
+    padding: 5%;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
+    gap: 4rem;
+  }
+
+  .tutorial {
+    flex-direction: row;
+    width: 100%;
+    background: transparent !important;
+    backdrop-filter: none;
+    div {
+      height: 100%;
+      border-radius: 15px;
+      width: 40%;
+      overflow: hidden;
+
+      img {
+        border-radius: 15px;
+      }
+    }
+
+    article {
+      width: 60%;
+    }
+  }
+
   .about {
     position: relative;
     align-items: center;
-    .xakari_front_app {
-      display: block;
-      height: 400px;
-      margin: 0px 20px;
-    }
-    flex-direction: row;
-
-    video {
-      width: 800px;
-    }
+    flex-direction: column;
+    background: transparent !important;
+    backdrop-filter: none;
     div {
+      position: relative;
+      display: flex;
+      height: 400px;
+      .xakari_front_app {
+        position: relative;
+        display: block;
+        margin: 0px 20px;
+        height: 100%;
+      }
+      video {
+        border-radius: 15px;
+        height: 100%;
+      }
+    }
+    article {
       padding: 20px 30px;
       h2 {
         font-size: 40px;

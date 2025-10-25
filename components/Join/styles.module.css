@@ -25,6 +25,17 @@
   background-color: transparent;
   width: 100%;
   padding: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(29, 135, 254, 1) 0%,
+    rgba(255, 167, 60, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
 }
 .desc {
   font-size: 1.5vh;
@@ -67,6 +78,14 @@
   animation: 1s slide-gradient infinite alternate;
   background-size: 300% 100%;
   z-index: -1;
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 @keyframes slide-gradient {
   0% {
