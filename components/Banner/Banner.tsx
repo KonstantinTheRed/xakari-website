@@ -76,7 +76,7 @@ export default function Banner(props: BannerProps) {
 
                   boxShadow: "0px 0px 15px rgba(0,0,0,1)",
                   color: "rgba(200,200,200,1)",
-                  padding: "1% 5%",
+                  padding: "3% 5%",
                   paddingBottom: "8%",
                   fontSize: "90%",
                 }}
