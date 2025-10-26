@@ -19,14 +19,13 @@
 .title {
   color: rgba(255, 167, 60, 1);
   font-size: 3vh;
-  font-weight: 400;
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-family: "Jost", Arial, Helvetica, sans-serif;
   text-align: center;
   margin: 0;
   margin-top: 10px;
   background-color: transparent;
   width: 100%;
-  padding: 10px;
   background: linear-gradient(
     90deg,
     rgba(29, 135, 254, 1) 0%,
@@ -42,9 +41,9 @@
 .highlights {
   top: 0;
   position: absolute;
-  height: calc(100% + 2px);
+  height: calc(100%);
   width: 100%;
-  transform: scale(100%, 100%) translateY(-1px);
+  transform: scale(100%, 100%) translateY(-2px);
   background: linear-gradient(
     90deg,
     rgba(29, 135, 254, 1) 0%,
@@ -53,9 +52,8 @@
   z-index: -1;
 }
 .desc {
-  font-size: 1.5vh;
+  font-size: 90%;
   font-weight: 400;
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -65,7 +63,7 @@
 .button {
   position: relative;
   display: flex;
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-family: "Jost", Arial, Helvetica, sans-serif;
   background-color: transparent;
   border: none;
 
@@ -81,14 +79,13 @@
 }
 .button_border {
   position: absolute;
-  width: calc(100% + 2px);
-  height: calc(100% + 3px);
+  width: calc(100% + 6px);
+  height: calc(100% + 5px);
   background: linear-gradient(
     90deg,
     rgba(29, 135, 254, 1) 0%,
     rgba(255, 167, 60, 1) 100%
   );
-  transform: translateY(0px);
   border-radius: 100px;
   animation: 1s slide-gradient infinite alternate;
   background-size: 300% 100%;
