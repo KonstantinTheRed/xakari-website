@@ -57,7 +57,7 @@ export default function Banner(props: BannerProps) {
               <img
                 src="/imgs/video_shoot.jpg"
                 style={{
-                  height: "100%",
+                  height: "66%",
                   // FIXED: Changed "100vw" to "100%"
                   // "100%" respects the parent (.slide) container,
                   // while "100vw" can easily cause overflow on mobile.
@@ -72,20 +72,19 @@ export default function Banner(props: BannerProps) {
                   position: "absolute",
                   bottom: "0",
                   width: "100%",
-                  height: "25%",
-                  background: "rgba(0,0,0,0.7)",
-                  backdropFilter: "blur(25px)",
+                  height: "33%",
+
                   boxShadow: "0px 0px 15px rgba(0,0,0,1)",
                   color: "rgba(200,200,200,1)",
-                  padding: "15px 20px",
-                  paddingBottom: "50px",
-                  fontSize: "0.9rem",
+                  padding: "1% 5%",
+                  paddingBottom: "8%",
+                  fontSize: "90%",
                 }}
               >
                 <h2
                   style={{
                     margin: 0,
-                    marginBottom: "10px",
+                    marginBottom: "1%",
                     fontWeight: "100",
                     width: "100%",
                     textAlign: "center",
