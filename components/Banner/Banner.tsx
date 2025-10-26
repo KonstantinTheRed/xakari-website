@@ -64,7 +64,7 @@ export default function Banner(props: BannerProps) {
                   width: "100%",
                   maxWidth: "100%", // FIXED: Changed "100vw" to "100%"
                   objectFit: "cover",
-                  objectPosition: "0px -15px",
+                  objectPosition: "0px 0px",
                 }}
               />
               <div
@@ -72,7 +72,7 @@ export default function Banner(props: BannerProps) {
                   position: "absolute",
                   bottom: "0",
                   width: "100%",
-                  height: "33%",
+                  height: "34%",
 
                   boxShadow: "0px 0px 15px rgba(0,0,0,1)",
                   color: "rgba(200,200,200,1)",
