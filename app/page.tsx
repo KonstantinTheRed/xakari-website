@@ -121,6 +121,38 @@ export default function Home() {
               </article>
             </ImageSlide>
           </Section>
+          <Section
+            name="xakari-tutorial-3"
+            flow="column"
+            height="auto"
+            centered
+          >
+            <ImageSlide
+              imgSrc1="imgs/xakari_cap_5.png"
+              imgAlt1="Xakari app progress tracking"
+              imgSrc2="imgs/xakari_cap_6.png"
+              imgAlt2="Xakari app workout feedback"
+            >
+              {/* Passing the second article as a child */}
+              <article>
+                <h2 style={{ color: "rgba(29, 135, 254, 1)" }}>
+                  Connect with community groups and participate in event meetups
+                </h2>
+                <p>
+                  Find like-minded individuals, share fitness achievements, and
+                  receive support and encouragement.
+                  <br /> <br />
+                  For example, people can create a strength training plan to
+                  build muscles. They can also hit a gym that fits their needs
+                  in their community.
+                  <br />
+                  <br />
+                  The community fosters a sense of belonging and accountability,
+                  making it easier to stay motivated and on track.
+                </p>
+              </article>
+            </ImageSlide>
+          </Section>
         </main>
       </div>
     </>
